@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title> <%= title %> - Blog</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <script src="/javascript/bootstrap.min.js"></script>
+    <script src="/javascript/jquery.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">竞彩论坛</a>
+            </div>
+            <a class="navbar-brand" href="/products">订阅服务</a>
+            <a class="navbar-brand" href="/product/new">新增产品服务</a>
+            <a class="navbar-brand" href="/products/orderlist">订单列表</a>
+            <ul class="nav navbar-nav navbar-right">
+
+               <% if(user){ %>
+                <li><a title="发表文章" href="/post"> <%= user.name %> </a></li>
+                <li><a href="/user_logout"><span class="glyphicon glyphicon-log-out"></span>登出</a></li>
+                <%}else{%>
+                <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                <li><a href="/signin"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+
+    <div class="col-sm-12">

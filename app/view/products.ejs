@@ -1,0 +1,31 @@
+<%- include header %>
+<ul class="list-group">
+    
+    <div class="row">
+       <% products.forEach(function(product){%>
+
+    <div class="col-md-3 col-sm-3">
+        <div class="thumbnail">
+            <img src="/images/<%= product.productImg %>"" alt=<%= product.price %>/>
+            <div class="caption">
+                <h3 class="ellipsis-1 center"><%= product.name %></h3>
+
+                  <p class="info">
+                   <span>订阅价格：<%= product.price %> RMB</span>
+                   <span>|</span>
+                    <span>已售<%= product.count %>份</span>
+                  </p>
+                  
+                  <p><a class="mr-10 btn btn-primary" href="/products/order/?id=<%= product._id%>" role="button">购买</a>
+                    <a class="btn btn-default" href="" role="button" disabled="disabled">收藏</a>
+                  </p>
+            </div>
+        </div>
+    </div>
+    <%})%>
+</div>
+   
+    
+</ul>
+<%- include footer %>
+

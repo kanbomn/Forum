@@ -1,0 +1,55 @@
+<%- include header %>
+<ul class="list-group">
+    
+  <div class="row">
+       
+
+    <div class="row">
+	<table class="table table-hover table-bordered">
+		<thead>
+			<tr>
+				<th>订单编号</th>
+			    <th>订单内容</th>
+			    <th>订单总额</th>
+			    <th>订单状态</th>
+			    <th>用户名称</th>
+			    <th>订单时间</th>
+			    <th>查看</th>
+			    <th>更新</th>
+			    <th>删除</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td> <%=orderObj.orderID %></td>
+				<td> <%= orderObj.orderContent%></td>
+				<td> <%= orderObj.amount%></td>
+				<td> <%= orderObj.status%></td>
+				<td> <%=orderObj.client %></td>
+				<td> <%= orderObj.orderTime %></td>
+				<td> <a target="_blank" href="/detail/">查看</a></td>
+				<td> <a target="_blank" href="/admin/movie_update/">更新</a></td>
+				<td> <button class="btn btn-danger del" type="button" data-id="">删除</button></td>
+			</tr>
+		</tbody>
+	</table>
+   </div>
+    
+ </div>
+ 
+
+    
+</ul>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+ <div class="col-md-3 col-sm-3">
+        <div class="thumbnail">
+            <img src="/images/alipay.jpg" />
+            
+        </div>
+    </div>
+<%- include footer %>
